@@ -16,3 +16,11 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('users', 'UsersController@index');
+$router->post('users', 'UsersController@index');
+$router->get('/users/add', 'UsersController@create');
+$router->post('/users/store', 'UsersController@store');
+$router->get('/users/edit/{id}', 'UsersController@edit');
+$router->post('/users/update/{id}', 'UsersController@update');
+$router->delete('/users/delete/{id}', 'UsersController@destroy');
