@@ -35,7 +35,7 @@ class UsersController extends Controller
             }
         } catch (\Exception $e) {
             if ($e->getCode() === '42S02') {
-                $data['message'] = 'A tabela `users` ainda não existe. Execute a migration para criá-la.';
+                $data['message'] = 'A tabela `users` ainda não existe. Execute a migration para criá-la.(php artisan migrate)';
                 $users = [];
             }
         }
